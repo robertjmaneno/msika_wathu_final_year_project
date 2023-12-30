@@ -1,0 +1,86 @@
+class UserImage extends StatefulWidget {
+  const UserImage({Key? key});
+
+  @override
+  State<UserImage> createState() => _UserImageState();
+}
+
+class _UserImageState extends State<UserImage> {
+  @override
+  Widget build(BuildContext context) {
+    final themeState = Provider.of<DarkThemeProvider>(context);
+
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          const SizedBox(height: 12),
+          ProfileMenu(
+            icon: 'assets/images/edit.svg',
+            text: 'Edit your profile',
+            onChanged: (Null) {},
+          ),
+          SizedBox(
+              height: MediaQuery.of(context).size.height *
+                  0.02), // Adjusting the spacing dynamically
+          ProfileMenu(
+            icon: 'assets/images/orders',
+            text: 'Orders',
+            onChanged: (Null) {},
+          ),
+          SizedBox(
+              height: MediaQuery.of(context).size.height *
+                  0.02), // Adjusting the spacing dynamically
+          ProfileMenu(
+            icon: 'assets/images/heart.svg',
+            text: 'Dashboard',
+            onChanged: (Null) {},
+          ),
+          SizedBox(
+              height: MediaQuery.of(context).size.height *
+                  0.02), // Adjusting the spacing dynamically
+         
+          ,
+          SizedBox(
+              height: MediaQuery.of(context).size.height *
+                  0.02), // Adjusting the spacing dynamically
+          ProfileMenu(
+            icon: 'assets/images/log-out.svg',
+            text: 'Log Out',
+            onChanged: (Null) {
+              _showLogOutDialogue();
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _showLogOutDialogue() async {
+    await showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14.1),
+          ),
+          title: const Text('Log Out'),
+          content: const Text('Are you sure you want to log out?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                if (Navigator.canPop(context)) {
+                  Navigator.pop(context);
+                }
+              },
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Yes'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+}

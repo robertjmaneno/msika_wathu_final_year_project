@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "312397643278",
+    "project_id": "final-year-1ad10",
+    "storage_bucket": "final-year-1ad10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312397643278:android:f6139bce255391851d865f",
+        "android_client_info": {
+          "package_name": "com.example.msika_wathu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312397643278-82vgsegkv8m7rcbooeh6l3quh17fge7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM7BvJFv_2coOdf2lNJ7FQKcR_wA5aHDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312397643278-82vgsegkv8m7rcbooeh6l3quh17fge7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
